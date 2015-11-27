@@ -17,12 +17,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Woh-HT-My0" customClass="BarChartView" customModule="Charts">
-                                <rect key="frame" x="0.0" y="0.0" width="960" height="1080"/>
+                                <rect key="frame" x="0.0" y="0.0" width="960" height="540"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ns8-3F-BpT" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="961" y="0.0" width="960" height="1080"/>
+                                <rect key="frame" x="961" y="0.0" width="960" height="540"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zcj-Zi-5Xw" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="541" width="960" height="540"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pJw-7f-fOX" customClass="HorizontalBarChartView" customModule="Charts">
+                                <rect key="frame" x="961" y="541" width="960" height="540"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -33,6 +43,8 @@
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
                         <outlet property="barChartView" destination="Woh-HT-My0" id="5hM-kZ-tYX"/>
+                        <outlet property="horizontalBarChartView" destination="pJw-7f-fOX" id="GAN-oC-sQ6"/>
+                        <outlet property="lineChartView" destination="zcj-Zi-5Xw" id="Lmn-Pd-UYI"/>
                         <outlet property="pieChartView" destination="Ns8-3F-BpT" id="dJD-uP-abW"/>
                     </connections>
                 </viewController>
