@@ -37,7 +37,9 @@ class ViewController: UIViewController {
         barChartView.noDataText = "Não há dados para serem exibidos."
         barChartView.descriptionText = "Novos clientes por mês"
         barChartView.descriptionFont = UIFont(name: "Arial", size: 25)
-        barChartView.descriptionTextPosition = CGPoint(x: 400, y: 2)
+        barChartView.descriptionTextAlign = NSTextAlignment.Left
+        barChartView.descriptionTextPosition = CGPoint(x: 2, y: 2)
+        barChartView.extraTopOffset = 40
 
         let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
         let unitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
@@ -60,7 +62,8 @@ class ViewController: UIViewController {
         pieChartView.noDataText = "Não há dados para serem exibidos."
         pieChartView.descriptionText = "Eventos em aberto no momento"
         pieChartView.descriptionFont = UIFont(name: "Arial", size: 25)
-        pieChartView.descriptionTextPosition = CGPoint(x: 400, y: 2)
+        pieChartView.descriptionTextAlign = NSTextAlignment.Left
+        pieChartView.descriptionTextPosition = CGPoint(x: 2, y: 2)
         
         let types = ["Alarme", "Arme", "Desarme", "Pânico", "Sem controle"]
         let qty = [20.0, 90.0, 10.0, 34.0, 12.0]
@@ -81,7 +84,9 @@ class ViewController: UIViewController {
         lineChartView.noDataText = "Não há dados para serem exibidos."
         lineChartView.descriptionText = "Eventos recebidos por hora"
         lineChartView.descriptionFont = UIFont(name: "Arial", size: 25)
-        lineChartView.descriptionTextPosition = CGPoint(x: 400, y: 2)
+        lineChartView.descriptionTextAlign = NSTextAlignment.Left
+        lineChartView.descriptionTextPosition = CGPoint(x: 2, y: 2)
+        lineChartView.extraTopOffset = 40
         
         let horas = ["10:00", "11:00", "12:00", "13:00", "14:00", "15:00"]
         let qty = [1500.0, 1901.00, 2908.00, 987.00, 1200.00, 1230.00]
@@ -100,7 +105,9 @@ class ViewController: UIViewController {
         horizontalBarChartView.noDataText = "Não há dados para serem exibidos."
         horizontalBarChartView.descriptionText = "Novos clientes por mês"
         horizontalBarChartView.descriptionFont = UIFont(name: "Arial", size: 25)
-        horizontalBarChartView.descriptionTextPosition = CGPoint(x: 400, y: 2)
+        horizontalBarChartView.descriptionTextAlign = NSTextAlignment.Left
+        horizontalBarChartView.descriptionTextPosition = CGPoint(x: 2, y: 2)
+        horizontalBarChartView.extraTopOffset = 40
         
         let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
         let unitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
