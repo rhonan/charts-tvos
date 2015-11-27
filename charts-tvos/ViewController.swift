@@ -97,20 +97,23 @@ class ViewController: UIViewController {
         }
         
         let chartDataSet = LineChartDataSet(yVals: dataEntries, label: "Eventos recebidos")
+        chartDataSet.drawCubicEnabled = true
+        chartDataSet.drawFilledEnabled = true
+        chartDataSet.fillAlpha = 1.0
         
         lineChartView.data = LineChartData(xVals: horas, dataSet: chartDataSet)
     }
     
     func createHorizontalBarChart() {
         horizontalBarChartView.noDataText = "Não há dados para serem exibidos."
-        horizontalBarChartView.descriptionText = "Novos clientes por mês"
+        horizontalBarChartView.descriptionText = "Quantidade de ocorrências tratadas por operador"
         horizontalBarChartView.descriptionFont = UIFont(name: "Arial", size: 25)
         horizontalBarChartView.descriptionTextAlign = NSTextAlignment.Left
         horizontalBarChartView.descriptionTextPosition = CGPoint(x: 2, y: 2)
         horizontalBarChartView.extraTopOffset = 40
         
-        let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-        let unitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
+        let months = ["Fernando", "Rhonan", "Wesley"]
+        let unitsSold = [856.0, 903.0, 1300.0]
         
         var dataEntries: [BarChartDataEntry] = []
         
@@ -119,7 +122,7 @@ class ViewController: UIViewController {
             dataEntries.append(dataEntry)
         }
         
-        let chartDataSet = BarChartDataSet(yVals: dataEntries, label: "Units Sold")
+        let chartDataSet = BarChartDataSet(yVals: dataEntries, label: "Ocorrências")
         chartDataSet.colors = ChartColorTemplates.colorful()
         
         horizontalBarChartView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
@@ -131,7 +134,7 @@ class ViewController: UIViewController {
         barChartView.data?.dataSets[0].entryForXIndex(1)?.value = (barChartView.data?.dataSets[0].entryForXIndex(1)?.value)! + 1
         barChartView.notifyDataSetChanged()
         
-        // line chart
+        // pie chart
         pieChartView.data?.dataSets[0].entryForXIndex(1)?.value = (pieChartView.data?.dataSets[0].entryForXIndex(1)?.value)! + 1
         pieChartView.notifyDataSetChanged()
         
