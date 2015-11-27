@@ -47,8 +47,11 @@ class ViewController: UIViewController {
     
     func updateCharts()
     {
-        let unitsSold = [20.0, 20.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 8.0]
-        setChart(months, values: unitsSold)
+        
+        barChartView.data?.dataSets[0].entryForXIndex(1)?.value = (barChartView.data?.dataSets[0].entryForXIndex(1)?.value )! + 1
+        
+        barChartView.notifyDataSetChanged()
+        
         NSLog("Chart updated.")
     }
 }
