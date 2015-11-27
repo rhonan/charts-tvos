@@ -41,6 +41,7 @@ class ViewController: UIViewController {
         
         let chartDataSet = BarChartDataSet(yVals: dataEntries, label: "Units Sold")
         let chartData = BarChartData(xVals: months, dataSet: chartDataSet)
+        barChartView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
         barChartView.data = chartData
     }
 }
