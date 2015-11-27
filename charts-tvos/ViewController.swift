@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         let unitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
         
         setChart(months, values: unitsSold)
-        NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: Selector("sayHello"), userInfo: nil, repeats: true)
+        NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: Selector("updateCharts"), userInfo: nil, repeats: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,7 +45,7 @@ class ViewController: UIViewController {
         barChartView.data = chartData
     }
     
-    func sayHello()
+    func updateCharts()
     {
         let unitsSold = [20.0, 20.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 8.0]
         setChart(months, values: unitsSold)
